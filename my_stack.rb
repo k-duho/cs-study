@@ -1,10 +1,9 @@
-class Stack
+class MyStack
   attr_reader :list, :last_index
 
   def initialize
     @list = []
     @last_index = -1
-
   end
 
   def push(object)
@@ -16,10 +15,17 @@ class Stack
     @last_index -= 1
     @list.shift
   end
+
+  def last
+    @list.last
+  end
+
+  def empty?
+    @list.empty?
+  end
 end
 
-
-stack = Stack.new
+stack = MyStack.new
 stack.push 1
 stack.push 12
 stack.push 13
