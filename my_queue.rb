@@ -13,7 +13,7 @@ class MyQueue
 
   def pop
     @last_index -= 1
-    @list.pop
+    @list.shift
   end
 
   def first

@@ -24,12 +24,3 @@ class MyStack
     @list.empty?
   end
 end
-
-stack = MyStack.new
-stack.push 1
-stack.push 12
-stack.push 13
-p stack.list
-p stack.pop
-
-
