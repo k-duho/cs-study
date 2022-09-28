@@ -13,10 +13,10 @@ class MyStack
 
   def pop
     @last_index -= 1
-    @list.shift
+    @list.pop
   end
 
-  def last
+  def peek
     @list.last
   end
 
