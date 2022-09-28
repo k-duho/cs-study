@@ -1,5 +1,8 @@
-## JadenCase 문자열 만들기
-  ## - 正確性94.4
+#
+# JadenCase 문자열 만들기
+#
+
+# Try1 - 정확성 94.4
 CHAR_FOR_FILL_BLANK = "%"
 
 def solution(s)
@@ -10,4 +13,13 @@ def solution(s)
 
     string.capitalize
   end.join(" ")
+end
+
+# Try2 - 정확성 100
+def solution(s)
+    s.gsub(/[\S]{0,}/) do |matched_string|
+        next matched_string if matched_string.empty?
+        
+        matched_string.capitalize
+    end
 end
