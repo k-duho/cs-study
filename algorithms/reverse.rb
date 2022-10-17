@@ -1,3 +1,15 @@
+# Try - 0
+def reverse(array)
+  tmp_array = [] # memory used
+
+  loop do
+    break if array.empty?
+
+    tmp_array << array.pop
+  end
+end
+
+# Try - 1
 def reverse(array)
   last_index = array.size - 1
   first_index = 0
