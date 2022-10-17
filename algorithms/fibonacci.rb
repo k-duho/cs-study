@@ -13,3 +13,18 @@ def fib(length, fibonacci_arr: nil)
   end
   fibonacci_arr
 end
+
+# メモ化
+def fib(length)
+  @fibonacci_arr ||= [1]
+
+  if @fibonacci_arr.size < length
+    last_idx = @fibonacci_arr.size - 1
+    plus_numbers = @fibonacci_arr[last_idx - 1..last_idx]
+    @fibonacci_arr << plus_numbers.sum
+    last_idx = length - 1
+    fib(length)
+  end
+  @fibonacci_arr
+end
+
